@@ -1,0 +1,27 @@
+ 
+<!DOCTYPE html>
+<body>
+        <label for="">Vật Lí :</label>
+        <input type="number" id = vatly>
+
+        <label for="">Hóa Học :</label>
+        <input type="number" id = hoahoc>
+
+        <label for="">Sinh học :</label>
+        <input type="number" id = sinhhoc>
+    <button type="button" onclick="getDiemTb()">Nhấn vào đây để hiển thị kết quả</button>
+    
+    <script>
+function getDiemTb()
+{
+    let a = parseInt(document.getElementById("vatly").value);
+    let b = parseInt(document.getElementById("hoahoc").value);
+    let c = parseInt(document.getElementById("sinhhoc").value);
+
+    let tb = (a + b + c)/3;
+    let total = a + b + c;
+    document.write("điểm trung bình là: " + tb );
+    document.write("tổng điểm: " + tatal );
+}
+ </script>
+</body>

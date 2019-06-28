@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body>
+    <label for="">Số tiền</label>
+    <input type="number" id= "Sotien">
+<select id="from">
+    <option value="VND">Việt Nam Đồng</option>
+    <option value="USD">Đô la Mỹ</option>
+  </select>
+  <select id="to">
+    <option value="VND">Việt Nam Đồng</option>
+    <option value="USD">Đô la Mỹ</option>
+  </select>
+<button type="button" onclick="C()">Đổi tiền</button>
+<p>Kết Quả: </p>
+<p id="result"></p>
+<script>
+   function C() {
+    let value = parseInt(document.getElementById("Sotien").value);
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    if(from == "USD" && to == "VND"){
+        let result = value * 23000;
+        document.getElementById("result").innerHTML = result + " VNĐ";
+    }
+    if(to == "USD" && from == "VND"){
+        let result = value / 23000;
+        document.getElementById("result").innerHTML = "$"+result 
+    }
+    if(to == "USD" && from == "USD"){
+        document.getElementById("result").innerHTML = "Không thực hiện được";
+    }
+    if(to == "VND" && from == "VND"){
+        document.getElementById("result").innerHTML = "Không thực hiện được";
+    }
+    }
+</script>
+</body>

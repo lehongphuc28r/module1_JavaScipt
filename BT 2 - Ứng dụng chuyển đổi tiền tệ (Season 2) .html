@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<style>
+    .abc{
+        font-size: 20px; 
+        color: red
+    }
+    .bt{
+        font-size: 40px;
+        color: green
+    }
+</style>
 <body>
     <label for="">Số tiền</label>
     <input type="number" id= "Sotien">
@@ -12,7 +22,7 @@
   </select>
 <button type="button" onclick="C()">Đổi tiền</button>
 <p>Kết Quả: </p>
-<p id="result"></p>
+<p id="result" class="abc"></p>
 <script>
    function C() {
     let value = parseInt(document.getElementById("Sotien").value);
@@ -27,11 +37,12 @@
         document.getElementById("result").innerHTML = "$"+result 
     }
     if(to == "USD" && from == "USD"){
+        
         document.getElementById("result").innerHTML = "Không thực hiện được";
     }
     if(to == "VND" && from == "VND"){
         document.getElementById("result").innerHTML = "Không thực hiện được";
     }
-    }
+}
 </script>
 </body>

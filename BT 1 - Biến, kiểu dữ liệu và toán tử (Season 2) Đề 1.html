@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <head>
 <body>
-    
-    <label for="">Toán :</label>
-    <input id="math" type="number">
-
-    <label for="">Hóa :</label>
+        <label for="">Toán :</label>
+        <input id="math" type="number">
+        <label for="">Hóa :</label>
     <input id="hoa" type="number">
-
     <label for="">Lí :</label>
     <input id="li" type="number">
-
-    <button type="button" onclick="show()">click</button>
+        <button type="button" onclick="show()">click</button>
+        <p>Điểm trung bình :</p>
+        <p id="TB"></p>
+        <p>Điểm Tổng :</p>
+        <p id="sum"></p>
     <script>
         function show(){
         let math = parseInt(document.getElementById("math").value);
@@ -19,8 +19,8 @@
         let li = parseInt(document.getElementById("li").value);
         let result1 = (math + li + hoa ) / 3;
         let result2 = math + li + hoa
-        alert(result1);
-        alert(result2);   
+        document.getElementById("TB").innerHTML = (result1 + " điểm");
+        document.getElementById("sum").innerHTML = (result2 + " điểm");   
         }
     </script>   
 </body> 
